@@ -20,11 +20,11 @@
 *.zip
 *.ppu
 *.bak
+*.ini
+*.lps
 
 lib/
 backup/
-*.lps
-*.copy
+out/
+Project?
 project?
-demo
-*.ini

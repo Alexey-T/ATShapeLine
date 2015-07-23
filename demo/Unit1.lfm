@@ -1,0 +1,349 @@
+object Form1: TForm1
+  Left = 574
+  Height = 399
+  Top = 153
+  Width = 382
+  BorderStyle = bsDialog
+  Caption = 'TShapeLine demo'
+  ClientHeight = 399
+  ClientWidth = 382
+  Color = clWhite
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Position = poScreenCenter
+  LCLVersion = '1.5'
+  object Line1: TShapeLine
+    Left = 12
+    Height = 25
+    Top = 176
+    Width = 357
+    LineColor = clBlue
+    ArrowColor = clBlue
+    LineWidth = 1
+    Arrow1 = True
+    Arrow2 = True
+    ArrowFactor = 6
+  end
+  object Line3: TShapeLine
+    Left = 12
+    Height = 1
+    Top = 24
+    Width = 77
+    LineColor = clBlack
+    ArrowColor = clBlack
+    LineWidth = 1
+  end
+  object Shape1: TShape
+    Left = 136
+    Height = 81
+    Top = 84
+    Width = 109
+    Brush.Color = 15856113
+    Shape = stRoundRect
+  end
+  object Label2: TLabel
+    Left = 144
+    Height = 13
+    Top = 88
+    Width = 44
+    Caption = 'Benefits'
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Line4: TShapeLine
+    Left = 208
+    Height = 29
+    Top = 56
+    Width = 49
+    Direction = drTopRightBottomLeft
+    LineColor = clBlack
+    ArrowColor = 15856113
+    LineWidth = 1
+    Arrow1 = True
+    ArrowFactor = 6
+  end
+  object Label3: TLabel
+    Left = 264
+    Height = 13
+    Top = 48
+    Width = 171
+    Caption = '2 direction arrows capabilities lines.'
+    ParentColor = False
+    WordWrap = True
+  end
+  object Label4: TLabel
+    Left = 12
+    Height = 13
+    Top = 8
+    Width = 78
+    Caption = 'Sample diagram'
+    ParentColor = False
+  end
+  object Line2: TShapeLine
+    Left = 88
+    Height = 53
+    Hint = 'This is the Hint'
+    Top = 24
+    Width = 65
+    ParentShowHint = False
+    ShowHint = True
+    Direction = drTopLeftBottomRight
+    LineColor = clBlack
+    ArrowColor = clBlack
+    LineWidth = 1
+    Arrow2 = True
+    ArrowFactor = 4
+  end
+  object Label8: TLabel
+    Left = 144
+    Height = 49
+    Top = 104
+    Width = 93
+    AutoSize = False
+    Caption = 'To create graphic diagrams, Gantt arrows, ...'
+    ParentColor = False
+    WordWrap = True
+  end
+  object Label9: TLabel
+    Left = 132
+    Height = 13
+    Top = 172
+    Width = 122
+    Caption = 'Sample configuration box'
+    ParentColor = False
+  end
+  object Label11: TLabel
+    Left = 12
+    Height = 13
+    Top = 376
+    Width = 362
+    Caption = 'Developed by Gon Perez-Jimenez    gon.perez@terra.es    Canarys Spain'
+    ParentColor = False
+  end
+  object GroupBox1: TGroupBox
+    Left = 12
+    Height = 157
+    Top = 204
+    Width = 361
+    Caption = 'Simple configuration'
+    ClientHeight = 142
+    ClientWidth = 357
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 182
+      Height = 13
+      Top = 0
+      Width = 41
+      Caption = 'Preview'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object probe: TShapeLine
+      Left = 238
+      Height = 65
+      Top = 2
+      Width = 97
+      LineColor = clBlack
+      ArrowColor = 15856113
+      LineWidth = 1
+    end
+    object Label5: TLabel
+      Left = 6
+      Height = 13
+      Top = 50
+      Width = 48
+      Caption = 'Direction'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 186
+      Height = 13
+      Top = 86
+      Width = 55
+      Caption = 'Line Color'
+      ParentColor = False
+    end
+    object Label7: TLabel
+      Left = 186
+      Height = 13
+      Top = 102
+      Width = 64
+      Caption = 'Arrow Color'
+      ParentColor = False
+    end
+    object Label10: TLabel
+      Left = 186
+      Height = 13
+      Top = 120
+      Width = 66
+      Caption = 'Arrow factor'
+      ParentColor = False
+    end
+    object CheckBox1: TCheckBox
+      Left = 6
+      Height = 24
+      Top = 2
+      Width = 125
+      Caption = 'Arrow 1 visible'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnClick = ConfigTLine
+      ParentFont = False
+      TabOrder = 0
+    end
+    object CheckBox2: TCheckBox
+      Left = 6
+      Height = 24
+      Top = 20
+      Width = 125
+      Caption = 'Arrow 2 visible'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnClick = ConfigTLine
+      ParentFont = False
+      TabOrder = 1
+    end
+    object RadioButton1: TRadioButton
+      Left = 6
+      Height = 24
+      Top = 66
+      Width = 107
+      Caption = 'Left to right'
+      Checked = True
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnClick = ConfigTLine
+      ParentFont = False
+      TabOrder = 2
+      TabStop = True
+    end
+    object RadioButton2: TRadioButton
+      Left = 6
+      Height = 24
+      Top = 83
+      Width = 103
+      Caption = 'Up to down'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnClick = ConfigTLine
+      ParentFont = False
+      TabOrder = 3
+    end
+    object RadioButton4: TRadioButton
+      Left = 6
+      Height = 24
+      Top = 119
+      Width = 186
+      Caption = 'Top right to bottom left'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnClick = ConfigTLine
+      ParentFont = False
+      TabOrder = 4
+    end
+    object RadioButton3: TRadioButton
+      Left = 6
+      Height = 24
+      Top = 101
+      Width = 186
+      Caption = 'Top left to bottom right'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnClick = ConfigTLine
+      ParentFont = False
+      TabOrder = 5
+    end
+    object Panel1: TPanel
+      Left = 274
+      Height = 13
+      Top = 86
+      Width = 53
+      BevelOuter = bvNone
+      BorderStyle = bsSingle
+      Caption = ' '
+      Color = clBlack
+      ParentColor = False
+      TabOrder = 6
+      OnClick = Panel1Click
+    end
+    object Panel2: TPanel
+      Left = 274
+      Height = 13
+      Top = 102
+      Width = 53
+      BevelOuter = bvNone
+      BorderStyle = bsSingle
+      Caption = ' '
+      Color = 15856113
+      ParentColor = False
+      TabOrder = 7
+      OnClick = Panel2Click
+    end
+    object Edit1: TEdit
+      Left = 274
+      Height = 23
+      Top = 118
+      Width = 53
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      OnKeyPress = Edit1KeyPress
+      OnKeyUp = Edit1KeyUp
+      ParentFont = False
+      TabOrder = 8
+      Text = '8'
+    end
+  end
+  object ColorDialog1: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 152
+    top = 256
+  end
+end
