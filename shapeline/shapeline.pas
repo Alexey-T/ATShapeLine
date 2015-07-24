@@ -70,6 +70,8 @@ procedure Register;
 
 implementation
 
+uses Math;
+
 { TShapeLine }
 
 constructor TShapeLine.Create(AOwner: TComponent);
@@ -104,7 +106,6 @@ procedure TShapeLine.SetArrow1(Value: Boolean);
 begin
   if Value <> FArrow1 then begin
      FArrow1 := Value;
-     if Value then SetLineWidth(1);
      Invalidate;
   end;
 end;
@@ -113,7 +114,6 @@ procedure TShapeLine.SetArrow2(Value: Boolean);
 begin
   if Value <> FArrow2 then begin
      FArrow2 := Value;
-     if Value then SetLineWidth(1);
      Invalidate;
   end;
 end;
@@ -122,10 +122,7 @@ procedure TShapeLine.SetLineWidth(AValue: Integer);
 begin
   if AValue <> FLineWidth then
   begin
-    if FArrow1 or FArrow2 then
-      FLineWidth := 1
-    else
-      FLineWidth := AValue;
+    FLineWidth := AValue;
     Invalidate;
   end;
 end;
@@ -174,8 +171,11 @@ begin
     drLeftRight:
       begin
         start := (Height - FLineWidth) div 2;
-        Canvas.MoveTo(0, start);
-        Canvas.LineTo(Width, Start);
+        Canvas.Pen.Width:= FLineWidth;
+        Canvas.MoveTo(IfThen(FArrow1, FArrowFactor), start);
+        Canvas.LineTo(Width-IfThen(FArrow2, FArrowFactor), Start);
+        Canvas.Pen.Width:= 1;
+
         if FArrow1 then begin
           //Flecha hacia izquierda
           p1:=Point(0,start);
@@ -192,11 +192,15 @@ begin
           Canvas.Polygon([p1,p2,p3]);
         end;
       end;
+
     drUpDown:
       begin
         start := (Width - FLineWidth) div 2;
-        Canvas.MoveTo(start, 0);
-        Canvas.LineTo(start, Height);
+        Canvas.Pen.Width:= FLineWidth;
+        Canvas.MoveTo(start, IfThen(FArrow1, FArrowFactor));
+        Canvas.LineTo(start, Height-IfThen(FArrow2, FArrowFactor));
+        Canvas.Pen.Width:= 1;
+
         if FArrow1 then begin
           //Flecha hacia arriba
           p1:=Point(start,0);
@@ -217,6 +221,7 @@ begin
       begin
         Canvas.MoveTo(0, 0);
         Canvas.LineTo(Width, Height);
+
         if FArrow1 and(Width>0)then begin
           //Flecha hacia arriba
           Alfa:=ArcTan(Height/Width);
