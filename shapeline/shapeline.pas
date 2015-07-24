@@ -217,14 +217,23 @@ begin
           Canvas.Polygon([p1,p2,p3]);
         end;
       end;
+
     drTopLeftBottomRight:
       begin
-        Canvas.MoveTo(0, 0);
-        Canvas.LineTo(Width, Height);
+        Alfa:= arctan2(Height, Width);
+        Canvas.Pen.Width:= FLineWidth;
+        Canvas.MoveTo(
+          IfThen(FArrow1, Trunc(FArrowFactor*cos(Alfa))),
+          IfThen(FArrow1, Trunc(FArrowFactor*sin(Alfa)))
+          );
+        Canvas.LineTo(
+          Width-IfThen(FArrow2, Trunc(FArrowFactor*cos(Alfa))),
+          Height-IfThen(FArrow2, Trunc(FArrowFactor*sin(Alfa)))
+          );
+        Canvas.Pen.Width:= 1;
 
         if FArrow1 and(Width>0)then begin
           //Flecha hacia arriba
-          Alfa:=ArcTan(Height/Width);
           H0:=Round((FArrowFactor+1)*Sin(Alfa));
           W0:=Round((FArrowFactor+1)*Cos(Alfa));
 
@@ -251,7 +260,6 @@ begin
 
         if FArrow2 and(Width>0)then begin
           //Flecha hacia abajo
-          Alfa:=ArcTan(Height/Width);
           H0:=Round((FArrowFactor+1)*Sin(Alfa));
           W0:=Round((FArrowFactor+1)*Cos(Alfa));
 
@@ -283,13 +291,22 @@ begin
         end;
 
       end;
+
     drTopRightBottomLeft:
       begin
-        Canvas.MoveTo(Width, 0);
-        Canvas.LineTo(0, Height);
+        Alfa:= arctan2(Height, Width);
+        Canvas.Pen.Width:= FLineWidth;
+        Canvas.MoveTo(
+          Width-IfThen(FArrow1, Trunc(FArrowFactor*cos(Alfa))),
+          IfThen(FArrow1, Trunc(FArrowFactor*sin(Alfa)))
+          );
+        Canvas.LineTo(
+          IfThen(FArrow2, Trunc(FArrowFactor*cos(Alfa))),
+          Height-IfThen(FArrow2, Trunc(FArrowFactor*sin(Alfa)))
+          );
+        Canvas.Pen.Width:= 1;
+
         if FArrow1 and(Width>0)then begin
-          //Flecha hacia arriba
-          Alfa:=ArcTan(Height/Width);
           H0:=Round((FArrowFactor+1)*Sin(Alfa));
           W0:=Round((FArrowFactor+1)*Cos(Alfa));
 
@@ -319,8 +336,6 @@ begin
         end;
 
         if FArrow2 and(Width>0)then begin
-          //Flecha hacia abajo
-          Alfa:=ArcTan(Height/Width);
           H0:=Round((FArrowFactor+1)*Sin(Alfa));
           W0:=Round((FArrowFactor+1)*Cos(Alfa));
 

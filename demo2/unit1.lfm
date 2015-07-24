@@ -1,0 +1,75 @@
+object Form1: TForm1
+  Left = 513
+  Height = 358
+  Top = 261
+  Width = 320
+  BorderStyle = bsDialog
+  Caption = 'Demo'
+  ClientHeight = 358
+  ClientWidth = 320
+  LCLVersion = '1.5'
+  object ShapeLine1: TShapeLine
+    Left = 32
+    Height = 52
+    Top = 8
+    Width = 170
+    LineColor = clGreen
+    ArrowColor = clNavy
+    LineWidth = 8
+    Arrow1 = True
+    Arrow2 = True
+    ArrowFactor = 15
+  end
+  object ShapeLine2: TShapeLine
+    Left = 32
+    Height = 80
+    Top = 72
+    Width = 200
+    Direction = drTopLeftBottomRight
+    LineColor = clGreen
+    ArrowColor = clNavy
+    LineWidth = 10
+    Arrow1 = True
+    Arrow2 = True
+    ArrowFactor = 16
+  end
+  object ShapeLine3: TShapeLine
+    Left = 216
+    Height = 160
+    Top = 8
+    Width = 96
+    Direction = drUpDown
+    LineColor = clGreen
+    ArrowColor = clNavy
+    LineWidth = 8
+    Arrow1 = True
+    Arrow2 = True
+    ArrowFactor = 12
+  end
+  object ShapeLine4: TShapeLine
+    Left = 56
+    Height = 80
+    Top = 256
+    Width = 192
+    Direction = drTopRightBottomLeft
+    LineColor = clGreen
+    ArrowColor = clNavy
+    LineWidth = 10
+    Arrow1 = True
+    Arrow2 = True
+    ArrowFactor = 16
+  end
+  object ShapeLine5: TShapeLine
+    Left = 24
+    Height = 112
+    Top = 184
+    Width = 80
+    Direction = drTopRightBottomLeft
+    LineColor = clGreen
+    ArrowColor = clNavy
+    LineWidth = 10
+    Arrow1 = True
+    Arrow2 = True
+    ArrowFactor = 16
+  end
+end
