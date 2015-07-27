@@ -13,12 +13,16 @@
     <Description Value="Component paints line, horz/vert, with arrows or not"/>
     <License Value="Totally freeware"/>
     <Version Major="1"/>
-    <Files Count="1">
+    <Files Count="2">
       <Item1>
         <Filename Value="shapeline.pas"/>
-        <HasRegisterProc Value="True"/>
         <UnitName Value="shapeline"/>
       </Item1>
+      <Item2>
+        <Filename Value="shapeline_reg.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="shapeline_reg"/>
+      </Item2>
     </Files>
     <RequiredPkgs Count="2">
       <Item1>

@@ -66,8 +66,6 @@ type
     property OnDblClick;
   end;
 
-procedure Register;
-
 implementation
 
 uses Math;
@@ -365,11 +363,6 @@ begin
         end;
       end;
   end;
-end;
-
-procedure Register;
-begin
-  RegisterComponents('Misc', [TShapeLine]);
 end;
 
 end.

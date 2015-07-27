@@ -7,13 +7,13 @@ unit shapeline_pkg;
 interface
 
 uses
-  shapeline, LazarusPackageIntf;
+  shapeline, shapeline_reg, LazarusPackageIntf;
 
 implementation
 
 procedure Register;
 begin
-  RegisterUnit('shapeline', @shapeline.Register);
+  RegisterUnit('shapeline_reg', @shapeline_reg.Register);
 end;
 
 initialization
