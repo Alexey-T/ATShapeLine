@@ -1,36 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <Package Version="4">
-    <Name Value="shapeline_pkg"/>
+    <Name Value="ATShapeLine_package"/>
     <Type Value="RunAndDesignTime"/>
-    <Author Value="Gon Perez-Jimenez, fixed by Alexey Torgashin"/>
+    <Author Value="Lazarus port by Alexey Torgashin"/>
     <CompilerOptions>
       <Version Value="11"/>
       <SearchPaths>
         <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
     </CompilerOptions>
-    <Description Value="Component paints line, horz/vert, with arrows or not"/>
-    <License Value="Totally freeware"/>
+    <Description Value="Component paints lines, horizontal/vertical/diagonal, with optional arrows on both sides"/>
+    <License Value="MPL 2.0"/>
     <Version Major="1"/>
     <Files Count="2">
       <Item1>
-        <Filename Value="shapeline.pas"/>
-        <UnitName Value="shapeline"/>
+        <Filename Value="atshapeline.pas"/>
+        <UnitName Value="atshapeline"/>
       </Item1>
       <Item2>
-        <Filename Value="shapeline_reg.pas"/>
+        <Filename Value="atshapeline_register.pas"/>
         <HasRegisterProc Value="True"/>
-        <UnitName Value="shapeline_reg"/>
+        <UnitName Value="atshapeline_register"/>
       </Item2>
     </Files>
-    <RequiredPkgs Count="2">
+    <RequiredPkgs Count="1">
       <Item1>
         <PackageName Value="LCL"/>
       </Item1>
-      <Item2>
-        <PackageName Value="FCL"/>
-      </Item2>
     </RequiredPkgs>
     <UsageOptions>
       <UnitPath Value="$(PkgOutDir)"/>

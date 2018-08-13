@@ -2,20 +2,20 @@
   This source is only used to compile and install the package.
  }
 
-unit shapeline_pkg;
+unit atshapeline_package;
 
 interface
 
 uses
-  shapeline, shapeline_reg, LazarusPackageIntf;
+  atshapeline, atshapeline_register, LazarusPackageIntf;
 
 implementation
 
 procedure Register;
 begin
-  RegisterUnit('shapeline_reg', @shapeline_reg.Register);
+  RegisterUnit('atshapeline_register', @atshapeline_register.Register);
 end;
 
 initialization
-  RegisterPackage('shapeline_pkg', @Register);
+  RegisterPackage('atshapeline_package', @Register);
 end.
