@@ -5,7 +5,8 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, shapeline;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs,
+  atshapeline;
 
 type
   { TForm1 }
