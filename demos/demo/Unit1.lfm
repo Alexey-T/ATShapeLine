@@ -1,18 +1,17 @@
 object Form1: TForm1
   Left = 574
-  Height = 399
+  Height = 404
   Top = 153
-  Width = 382
+  Width = 384
   BorderStyle = bsDialog
-  Caption = 'TShapeLine demo'
-  ClientHeight = 399
-  ClientWidth = 382
+  Caption = 'ATShapeLine demo'
+  ClientHeight = 404
+  ClientWidth = 384
   Color = clWhite
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Arial'
   Position = poScreenCenter
-  LCLVersion = '1.5'
+  LCLVersion = '1.9.0.0'
   object Line1: TShapeLine
     Left = 12
     Height = 25
@@ -44,13 +43,12 @@ object Form1: TForm1
   end
   object Label2: TLabel
     Left = 144
-    Height = 13
+    Height = 14
     Top = 88
-    Width = 44
+    Width = 43
     Caption = 'Benefits'
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -68,21 +66,27 @@ object Form1: TForm1
     ArrowFactor = 6
   end
   object Label3: TLabel
-    Left = 264
-    Height = 13
-    Top = 48
-    Width = 171
+    Left = 168
+    Height = 16
+    Top = 32
+    Width = 209
     Caption = '2 direction arrows capabilities lines.'
+    Font.Color = clWindowText
+    Font.Height = -13
     ParentColor = False
+    ParentFont = False
     WordWrap = True
   end
   object Label4: TLabel
     Left = 12
-    Height = 13
+    Height = 16
     Top = 8
-    Width = 78
+    Width = 96
     Caption = 'Sample diagram'
+    Font.Color = clWindowText
+    Font.Height = -13
     ParentColor = False
+    ParentFont = False
   end
   object Line2: TShapeLine
     Left = 88
@@ -111,43 +115,33 @@ object Form1: TForm1
   end
   object Label9: TLabel
     Left = 132
-    Height = 13
+    Height = 14
     Top = 172
-    Width = 122
+    Width = 125
     Caption = 'Sample configuration box'
-    ParentColor = False
-  end
-  object Label11: TLabel
-    Left = 12
-    Height = 13
-    Top = 376
-    Width = 362
-    Caption = 'Developed by Gon Perez-Jimenez    gon.perez@terra.es    Canarys Spain'
     ParentColor = False
   end
   object GroupBox1: TGroupBox
     Left = 12
-    Height = 157
-    Top = 204
+    Height = 189
+    Top = 200
     Width = 361
     Caption = 'Simple configuration'
-    ClientHeight = 142
+    ClientHeight = 171
     ClientWidth = 357
     Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Arial'
+    Font.Height = -13
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
-      Left = 182
-      Height = 13
+      Left = 184
+      Height = 16
       Top = 0
-      Width = 41
+      Width = 50
       Caption = 'Preview'
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
+      Font.Height = -13
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
@@ -163,50 +157,48 @@ object Form1: TForm1
     end
     object Label5: TLabel
       Left = 6
-      Height = 13
+      Height = 14
       Top = 50
-      Width = 48
+      Width = 49
       Caption = 'Direction'
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
     end
     object Label6: TLabel
-      Left = 186
-      Height = 13
-      Top = 86
-      Width = 55
-      Caption = 'Line Color'
+      Left = 184
+      Height = 16
+      Top = 83
+      Width = 62
+      Caption = 'Line color'
       ParentColor = False
     end
     object Label7: TLabel
-      Left = 186
-      Height = 13
+      Left = 184
+      Height = 16
       Top = 102
-      Width = 64
-      Caption = 'Arrow Color'
+      Width = 72
+      Caption = 'Arrow color'
       ParentColor = False
     end
     object Label10: TLabel
-      Left = 186
-      Height = 13
-      Top = 120
-      Width = 66
-      Caption = 'Arrow factor'
+      Left = 184
+      Height = 16
+      Top = 128
+      Width = 76
+      Caption = 'Arrow width'
       ParentColor = False
     end
     object CheckBox1: TCheckBox
       Left = 6
       Height = 24
       Top = 2
-      Width = 125
+      Width = 114
       Caption = 'Arrow 1 visible'
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
+      Font.Height = -13
       OnClick = ConfigTLine
       ParentFont = False
       TabOrder = 0
@@ -214,12 +206,11 @@ object Form1: TForm1
     object CheckBox2: TCheckBox
       Left = 6
       Height = 24
-      Top = 20
-      Width = 125
+      Top = 24
+      Width = 114
       Caption = 'Arrow 2 visible'
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
+      Font.Height = -13
       OnClick = ConfigTLine
       ParentFont = False
       TabOrder = 1
@@ -227,13 +218,12 @@ object Form1: TForm1
     object RadioButton1: TRadioButton
       Left = 6
       Height = 24
-      Top = 66
-      Width = 107
+      Top = 64
+      Width = 97
       Caption = 'Left to right'
       Checked = True
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
+      Font.Height = -13
       OnClick = ConfigTLine
       ParentFont = False
       TabOrder = 2
@@ -242,12 +232,11 @@ object Form1: TForm1
     object RadioButton2: TRadioButton
       Left = 6
       Height = 24
-      Top = 83
-      Width = 103
+      Top = 88
+      Width = 95
       Caption = 'Up to down'
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
+      Font.Height = -13
       OnClick = ConfigTLine
       ParentFont = False
       TabOrder = 3
@@ -255,12 +244,11 @@ object Form1: TForm1
     object RadioButton4: TRadioButton
       Left = 6
       Height = 24
-      Top = 119
-      Width = 186
+      Top = 136
+      Width = 167
       Caption = 'Top right to bottom left'
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
+      Font.Height = -13
       OnClick = ConfigTLine
       ParentFont = False
       TabOrder = 4
@@ -268,18 +256,17 @@ object Form1: TForm1
     object RadioButton3: TRadioButton
       Left = 6
       Height = 24
-      Top = 101
-      Width = 186
+      Top = 112
+      Width = 167
       Caption = 'Top left to bottom right'
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
+      Font.Height = -13
       OnClick = ConfigTLine
       ParentFont = False
       TabOrder = 5
     end
     object Panel1: TPanel
-      Left = 274
+      Left = 272
       Height = 13
       Top = 86
       Width = 53
@@ -292,9 +279,9 @@ object Form1: TForm1
       OnClick = Panel1Click
     end
     object Panel2: TPanel
-      Left = 274
+      Left = 272
       Height = 13
-      Top = 102
+      Top = 105
       Width = 53
       BevelOuter = bvNone
       BorderStyle = bsSingle
@@ -304,19 +291,13 @@ object Form1: TForm1
       TabOrder = 7
       OnClick = Panel2Click
     end
-    object Edit1: TEdit
-      Left = 274
-      Height = 23
-      Top = 118
+    object Edit1: TSpinEdit
+      Left = 272
+      Height = 26
+      Top = 128
       Width = 53
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      OnKeyPress = Edit1KeyPress
-      OnKeyUp = Edit1KeyUp
-      ParentFont = False
+      OnChange = Edit1Change
       TabOrder = 8
-      Text = '8'
     end
   end
   object ColorDialog1: TColorDialog
@@ -343,7 +324,7 @@ object Form1: TForm1
       'ColorS=F0FBFF'
       'ColorT=A4A0A0'
     )
-    left = 152
-    top = 256
+    left = 32
+    top = 104
   end
 end

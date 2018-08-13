@@ -6,10 +6,14 @@ interface
 
 uses
   LCLIntf, LCLType, LMessages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ShapeLine, ExtCtrls, StdCtrls;
+  ExtCtrls, StdCtrls, ComCtrls, Spin, ATShapeLine;
 
 type
+
+  { TForm1 }
+
   TForm1 = class(TForm)
+    Edit1: TSpinEdit;
     Line2: TShapeLine;
     Line1: TShapeLine;
     Line3: TShapeLine;
@@ -36,14 +40,10 @@ type
     Label8: TLabel;
     Label9: TLabel;
     Label10: TLabel;
-    Edit1: TEdit;
-    Label11: TLabel;
+    procedure Edit1Change(Sender: TObject);
     procedure Panel1Click(Sender: TObject);
     procedure Panel2Click(Sender: TObject);
     procedure ConfigTLine(Sender: TObject);
-    procedure Edit1KeyPress(Sender: TObject; var Key: Char);
-    procedure Edit1KeyUp(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -64,6 +64,11 @@ if ColorDialog1.Execute then begin
    Probe.LineColor:=ColorDialog1.Color;
    Panel1.Color:=Probe.LineColor;
 end;
+end;
+
+procedure TForm1.Edit1Change(Sender: TObject);
+begin
+  probe.ArrowFactor:= Edit1.Value;
 end;
 
 procedure TForm1.Panel2Click(Sender: TObject);
@@ -91,19 +96,5 @@ else
    Probe.Direction:=drTopRightBottomLeft
 end;
 
-procedure TForm1.Edit1KeyPress(Sender: TObject; var Key: Char);
-begin
-Case Key of
-'0'..'9',#13,#8:;
-else Key:=#0;
-end;
-end;
-
-procedure TForm1.Edit1KeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-if(Key=VK_Return)and(Edit1.Text<>'') then
-  Probe.ArrowFactor:=StrToInt(Edit1.Text);
-end;
 
 end.
