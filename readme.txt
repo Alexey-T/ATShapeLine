@@ -1,4 +1,4 @@
-ATShapeLine is a component which paints line (4 directions: left-right, up-down, diagonals), with or without arrows at both sides. Line width is option. Line color and arrow color are options. It is Lazarus port of Delphi component TLine (renamed since TLine id is busy with TAChart).
+ATShapeLine is a component which paints line (directions: left-right, up-down, diagonals), with or without arrows at both sides. Line width is option. Line color and arrow color are options. It is Lazarus port of Delphi component TLine (renamed since TLine id is busy with TAChart).
 
 Original author: Gon Perez-Jimenez (Spain, 2002)
 Ported to Lazarus by: Alexey Torgashin (Russia)
